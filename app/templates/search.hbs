@@ -1,0 +1,11 @@
+<Search @search={{ this.search }}/>
+
+<p class="text-center">Sharing a few of our favourite movies</p>
+
+<div class="mt-4">
+  <div class="flex flex-wrap">
+    {{#each this.model as |movie|}}
+      <Movie @movie={{movie}} />
+    {{/each}}
+  </div>
+</div>

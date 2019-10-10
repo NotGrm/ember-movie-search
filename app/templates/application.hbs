@@ -1,22 +1,3 @@
 <Header @text="Ember Movie Search"/>
-<Search @search={{ this.search }}/>
 
-<p class="text-center">Sharing a few of our favourite movies</p>
-
-<div class="mt-4">
-  {{#if this.loading}}
-    <span class="h-24 m-auto text-center">loading...</span>
-  {{else if this.errorMessage}}
-    <div class="text-center text-red-600 font-bold m-auto">
-      {{ this.errorMessage }}
-    </div>
-  {{else}}
-    <div class="flex flex-wrap">
-      {{#each this.movies as |movie|}}
-        <Movie @movie={{movie}} />
-      {{/each}}
-    </div>
-  {{/if}}
-</div>
 {{outlet}}
-
